@@ -80,7 +80,7 @@ df_total_customers =pd.read_sql("""SELECT p.productName,
 FROM products p
 JOIN orderdetails od ON p.productCode = od.productCode
 JOIN orders o ON od.orderNumber = o.orderNumber
-GROUP BY p.productName, p.productCode
+GROUP BY p.productCode
 ORDER BY numpurchasers DESC;""",conn)
 
 # CodeGrade step9
