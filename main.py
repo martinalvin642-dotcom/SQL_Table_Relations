@@ -13,7 +13,7 @@ pd.read_sql("""SELECT * FROM sqlite_master""", conn)
 # CodeGrade step1
 # Replace None with your code
  # CodeGrade step1
-df_boston = pd.read_sql("""SELECT employees.firstname, employees.lastname, employees.jobtitle
+df_boston = pd.read_sql("""SELECT employees.firstname, employees.lastname
                             FROM employees
                             JOIN offices ON employees.officecode = offices.officecode
                             WHERE offices.city = 'Boston'""", conn)
