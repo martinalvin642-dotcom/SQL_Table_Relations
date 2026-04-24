@@ -110,7 +110,8 @@ JOIN customers c ON e.employeeNumber = c.salesRepEmployeeNumber
 JOIN orders o ON c.customerNumber = o.customerNumber
 JOIN orderdetails od ON o.orderNumber = od.orderNumber
 JOIN low_reach_products lrp ON od.productCode = lrp.productCode
-JOIN offices of ON e.officeCode = of.officeCode;
+JOIN offices of ON e.officeCode = of.officeCode
+    ORDER BY e.lastName DESC;
                           """,conn)
 
 # Run this cell without changes
